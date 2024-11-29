@@ -13,6 +13,15 @@ while vege:
     valasz=int(input())
    
     # tömb feltöltése billentyűzetről
+if (valasz==1):
+        feltoltes_szama=int(input("Add meg hány számmal szeretnéd feltölteni: "))
+        
+        for i in range(feltoltes_szama):
+            feltoltott_szamok=float(input())
+            adatok.append(feltoltott_szamok)
+            
+        kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+
     # tömb feltöltése véletlen számokkal   
     # tömbhöz egy új elem hozzáadása
     # a tömb egy adott sorszámú elem módosítása 
