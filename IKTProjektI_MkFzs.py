@@ -17,7 +17,6 @@ while vege:
     valasz=int(input())
 
     # tömb feltöltése billentyűzetről
-if (valasz==1):
     if (valasz==1):
         feltoltes_szama=int(input("Add meg hány számmal szeretnéd feltölteni: "))
         
@@ -29,7 +28,33 @@ if (valasz==1):
         
         
 
-    # tömb feltöltése véletlen számokkal   
+    # tömb feltöltése véletlen számokkal
+
+    elif (valasz==2):
+        
+        veletlen_szamok=int(input("Add meg hány véletlen számmal szeretnéd feltölteni a tömböt: "))
+        
+        while veletlen_szamok<1:
+        
+            print("Helytelen válasz, próbáld újra!")
+            veletlen_szamok=int(input("Add meg hány véletlen számmal szeretnéd feltölteni a tömböt: "))
+            
+        also_hatar=int(input("Add meg az alsó határt: "))
+        felso_hatar=int(input("Add meg a felső határt: "))
+        
+        while also_hatar>felso_hatar:
+            print("Helytelen válasz, próbáld újra!")
+            also_hatar=int(input("Add meg az alsó határt: "))
+            felso_hatar=int(input("Add meg a felső határt: "))
+            
+        for i in range(veletlen_szamok):
+            
+            adatok.append(random.randint(also_hatar, felso_hatar))
+        
+        kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+        
+
+
     # tömbhöz egy új elem hozzáadása
     # a tömb egy adott sorszámú elem módosítása 
     # a tömb egy adott sorszámú elem törlése
