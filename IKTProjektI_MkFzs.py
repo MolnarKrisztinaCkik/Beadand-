@@ -6,12 +6,16 @@ vege=1
 
 
 while vege:
-    print("Válassz menüpontot!")
-    print()
-    print("tömb feltöltése billentyűzetről = 1\ntömb feltöltése véletlen számokkal = 2\ntömbhöz egy új elem hozzáadása = 3\na tömb egy adott sorszámú elem módosítása = 4\na tömb egy adott sorszámú elem törlése = 5\ntömb ürítése = 6\ntömb kiírása = 7\nFeladatok = 8\nkilépés = 0")
-
-    valasz=int(input())
+    if (len(adatok)==0):    
+        print("========[ Válassz menüpontot! ]==========\n")
+        print("[1] - tömb feltöltése billentyűzetről\n[2] - tömb feltöltése véletlen számokkal\n[3] - tömbhöz egy új elem hozzáadása\n[0] - kilépés")
+    else:
+        print("========[ Válassz menüpontot! ]==========\n")
+        print("[1] - tömb feltöltése billentyűzetről\n[2] - tömb feltöltése véletlen számokkal\n[3] - tömbhöz egy új elem hozzáadása")
+        print("[4] - a tömb egy adott sorszámú elem módosítása\n[5] - a tömb egy adott sorszámú elem törlése\n[6] - tömb ürítése\n[7] - tömb kiírása\n[8] - Feladatok\n[0] - kilépés")
    
+    valasz=int(input())
+    
     # tömb feltöltése billentyűzetről
 if (valasz==1):
         feltoltes_szama=int(input("Add meg hány számmal szeretnéd feltölteni: "))
