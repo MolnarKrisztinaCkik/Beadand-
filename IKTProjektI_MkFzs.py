@@ -52,10 +52,16 @@ while vege:
             adatok.append(random.randint(also_hatar, felso_hatar))
         
         kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
-        
-
 
     # tömbhöz egy új elem hozzáadása
+
+    elif (valasz==3):
+        uj_elem=float(input("Add meg az új elemet: "))
+
+        adatok.append(round(uj_elem))
+        
+        kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+        
     # a tömb egy adott sorszámú elem módosítása 
     # a tömb egy adott sorszámú elem törlése
     # tömb ürítése
