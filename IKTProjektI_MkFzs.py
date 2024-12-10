@@ -61,11 +61,23 @@ while vege:
         adatok.append(round(uj_elem))
         
         kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
-        
+
     # a tömb egy adott sorszámú elem módosítása 
     # a tömb egy adott sorszámú elem törlése
     # tömb ürítése
     # tömb kiírása 
+    
+    elif (valasz==7):
+        print("A tömbben lévő adatok: ")
+        for i in range(len(adatok)):
+            
+            if (i==len(adatok)-1):
+                print(adatok[i], end="")
+            else:
+                print(adatok[i], end=", ")
+            
+        kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+
     #Feadatok
             # 1a feladat 
             # 1b feladat 
