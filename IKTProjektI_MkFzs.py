@@ -63,6 +63,20 @@ while vege:
         kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
     # a tömb egy adott sorszámú elem módosítása 
+
+    elif (valasz==4):
+        print("A tömbben lévő adatok: ")
+        for i in range(len(adatok)):
+            
+            if (i==len(adatok)-1):
+                print(adatok[i], end="")
+            else:
+                print(adatok[i], end=", ")
+            
+        adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet módositanád: "))
+        
+        adatok[adott_sorszam-1] = round(float(input()))
+
     # a tömb egy adott sorszámú elem törlése
     # tömb ürítése
     # tömb kiírása 
