@@ -94,6 +94,10 @@ while vege:
         adatok.pop(adott_sorszam-1)
 
     # tömb ürítése
+
+    elif (valasz==6):
+        adatok.clear()
+
     # tömb kiírása 
     
     elif (valasz==7):
