@@ -81,6 +81,14 @@ while vege:
 
     elif (valasz==5):
         
+        print("A tömbben lévő adatok: ")
+        for i in range(len(adatok)):
+            
+            if (i==len(adatok)-1):
+                print(adatok[i], end="")
+            else:
+                print(adatok[i], end=", ")
+        
         adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet törölnéd: "))
         
         adatok.pop(adott_sorszam-1)
