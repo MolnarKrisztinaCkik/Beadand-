@@ -78,6 +78,13 @@ while vege:
         adatok[adott_sorszam-1] = round(float(input()))
 
     # a tömb egy adott sorszámú elem törlése
+
+    elif (valasz==5):
+        
+        adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet törölnéd: "))
+        
+        adatok.pop(adott_sorszam-1)
+
     # tömb ürítése
     # tömb kiírása 
     
