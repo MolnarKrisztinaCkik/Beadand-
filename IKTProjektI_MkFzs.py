@@ -123,7 +123,17 @@ while vege:
             
             valasz2=int(input())
             # 1a feladat 
-        
+
+            if (valasz2==1):
+                max_ertek=max(adatok)
+                maximum_ertekek_szama=0
+                
+
+                for i in range(len(adatok)):
+                    if (adatok[i]==max_ertek):
+                       maximum_ertekek_szama+=1
+
+                print(f"{max_ertek} {maximum_ertekek_szama} alkalommal.")
 
             # 1b feladat 
             # 1c feladat 
