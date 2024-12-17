@@ -192,5 +192,8 @@ while vege:
                     print("nem téli hónap")
                     
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
-                
+
     # kilépés
+
+    elif (valasz==0):
+        vege-=1
