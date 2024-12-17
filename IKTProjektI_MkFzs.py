@@ -197,3 +197,4 @@ while vege:
 
     elif (valasz==0):
         vege-=1
+        
