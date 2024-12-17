@@ -151,5 +151,32 @@ while vege:
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
             # 1c feladat 
+
+            elif (valasz2==3):
+                adatok_szama=len(adatok)
+                adatok_osszege=0
+
+                for i in range(len(adatok)):
+                   adatok_osszege+=adatok[i]
+
+                atlag=adatok_osszege/adatok_szama
+                        
+                nagyobb_szamok=0
+                kisebb_szamok=0
+                        
+                for i in range(len(adatok)):
+                    if  (adatok[i]>atlag):
+                       nagyobb_szamok+=1
+                    else:
+                        kisebb_szamok+=1
+
+                if (nagyobb_szamok>kisebb_szamok):
+                    print("Az átlagnál nagyobb elemekből van több.")
+                else:
+                    print("Az átlagnál kisebb elemekből van több.")
+
+                        
+                kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+
             # 1d feladat
     # kilépés
