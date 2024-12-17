@@ -121,6 +121,7 @@ while vege:
             else:
                 print("A maximum érték hányszor fordul elő? = 1\nMekkora az adathalmaz terjedelme? = 2\nAz átlagnál kisebb, vagy az átlagnál nagyobb értékből van-e több? = 3\nTéli hónapban vagy? Van-e benne negatív hőmérséklet? = 4")
             
+            valasz2=int(input())
             # 1a feladat 
         
 
