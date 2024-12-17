@@ -135,6 +135,9 @@ while vege:
 
                 print(f"{max_ertek} {maximum_ertekek_szama} alkalommal.")
 
+                kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+
+
             # 1b feladat 
             # 1c feladat 
             # 1d feladat
