@@ -179,4 +179,18 @@ while vege:
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
             # 1d feladat
+
+            elif (valasz2==4):
+                negatív_ertek=0
+                for i in range(len(adatok)):
+                    if (adatok[i]<0):
+                        negatív_ertek+=1
+                    
+                if (negatív_ertek>0):
+                    print("téli hónap.")
+                else:
+                    print("nem téli hónap")
+                    
+                kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+                
     # kilépés
