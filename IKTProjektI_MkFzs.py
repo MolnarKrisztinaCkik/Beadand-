@@ -112,7 +112,15 @@ while vege:
         kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
     #Feadatok
+    elif (valasz==8):
+            if (len(adatok)==0):
+                print("Először adj meg adatokat!")
+                
+                kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+    
             # 1a feladat 
+        
+
             # 1b feladat 
             # 1c feladat 
             # 1d feladat
