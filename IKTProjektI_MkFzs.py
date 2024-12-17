@@ -139,6 +139,17 @@ while vege:
 
 
             # 1b feladat 
+
+            elif (valasz2==2):
+                max_ertek=max(adatok)
+                min_ertek=min(adatok)
+                    
+                adathalmaz=max_ertek-min_ertek
+
+                print(round(adathalmaz, 2))
+
+                kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+
             # 1c feladat 
             # 1d feladat
     # kilépés
