@@ -75,7 +75,7 @@ while vege:
             
         adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet módositanád: "))
         
-        adatok[adott_sorszam-1] = round(float(input()))
+        adatok[adott_sorszam-1] = round(float(input("Add meg mivel helyettesítenéd: ")))
 
     # a tömb egy adott sorszámú elem törlése
 
@@ -93,10 +93,19 @@ while vege:
         
         adatok.pop(adott_sorszam-1)
 
+        print(f"{adott_sorszam}. sorszámú elem sikeresen törölve!")
+
+        kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+
     # tömb ürítése
 
     elif (valasz==6):
-        adatok.clear()
+        biztos_kerdes=int(input())
+
+        if (biztos_kerdes==1):
+            adatok.clear()
+        else:
+            kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
     # tömb kiírása 
     
