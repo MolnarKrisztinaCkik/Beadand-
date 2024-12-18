@@ -69,9 +69,9 @@ while vege:
         for i in range(len(adatok)):
             
             if (i==len(adatok)-1):
-                print(adatok[i], end="")
+                print(int(adatok[i]), end="")
             else:
-                print(adatok[i], end=", ")
+                print(int(adatok[i]), end=", ")
             
         adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet módositanád: "))
         
@@ -85,9 +85,9 @@ while vege:
         for i in range(len(adatok)):
             
             if (i==len(adatok)-1):
-                print(adatok[i], end="")
+                print(int(adatok[i]), end="")
             else:
-                print(adatok[i], end=", ")
+                print(int(adatok[i]), end=", ")
         
         adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet törölnéd: "))
         
@@ -105,9 +105,9 @@ while vege:
         for i in range(len(adatok)):
             
             if (i==len(adatok)-1):
-                print(adatok[i], end="")
+                print(int(adatok[i]), end="")
             else:
-                print(adatok[i], end=", ")
+                print(int(adatok[i]), end=", ")
             
         kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
