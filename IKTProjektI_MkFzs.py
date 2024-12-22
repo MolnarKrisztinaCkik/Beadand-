@@ -18,11 +18,9 @@ while vege:
 
     # tömb feltöltése billentyűzetről
     if (valasz==1):
-        feltoltes_szama=int(input("Add meg hány számmal szeretnéd feltölteni: "))
+        szamok=input("Add meg a számokat vesszővel elválasztva: ").replace(" ", "").split(",")
         
-        for i in range(feltoltes_szama):
-            feltoltott_szamok=float(input())
-            adatok.append(round(feltoltott_szamok, 2))
+        adatok=[int(i) for i in szamok]
             
         kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
         
@@ -180,9 +178,9 @@ while vege:
                         kisebb_szamok+=1
 
                 if (nagyobb_szamok>kisebb_szamok):
-                    print("Az átlagnál nagyobb elemekből van több.")
+                    print(f"Az átlagnál nagyobb elemekből van több.\nAz átlag: {atlag}. ")
                 else:
-                    print("Az átlagnál kisebb elemekből van több.")
+                    print(f"Az átlagnál kisebb elemekből van több.\nAz átlag: {atlag}.")
 
                         
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
