@@ -30,7 +30,7 @@ while vege:
 
     elif (valasz==2):
         
-        veletlen_szamok=int(input("Add meg hány véletlen számmal szeretnéd feltölteni a tömböt: "))
+        veletlen_szamok=int(input("\nAdd meg hány véletlen számmal szeretnéd feltölteni a tömböt: "))
         
         while veletlen_szamok<1:
         
@@ -190,9 +190,9 @@ while vege:
                 adathalmaz=adatok[max_ertek]-adatok[min_ertek]
 
                 if (adathalmaz%1==0):
-                    print(int(adathalmaz))
+                    print(f"\nAz adathalmaz hossza:{int(adathalmaz)}")
                 else:
-                    print(round(adathalmaz, 2))
+                    print(f"\nAz adathalmaz hossza: {round(adathalmaz, 2)}")
 
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
@@ -240,9 +240,23 @@ while vege:
                     print("\nNem téli hónap")
                     
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
+                
+            # Helytelen válasz esetén
+    
+            elif (valasz2!=0):
+                print("Helytelen válasz. Probáld meg újra!")
+                
+                kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))   
 
     # kilépés
 
     elif (valasz==0):
         vege-=1
         
+        
+    # Helytelen válasz esetén
+    
+    else:
+        print("Helytelen válasz. Probáld meg újra!")
+        
+        kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
