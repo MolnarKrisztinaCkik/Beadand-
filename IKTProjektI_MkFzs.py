@@ -176,19 +176,23 @@ while vege:
 
             elif (valasz2==2):
                 max_ertek=0
-                min_ertek=0
                 
                 for i in range(len(adatok)):
                     if (adatok[i]>adatok[max_ertek]):
                         max_ertek=i
                         
+                min_ertek=0
+                
                 for i in range(len(adatok)):
                     if (adatok[i]<adatok[min_ertek]):
                         min_ertek=i
                     
-                adathalmaz=max_ertek-min_ertek
+                adathalmaz=adatok[max_ertek]-adatok[min_ertek]
 
-                print(round(adathalmaz, 2))
+                if (adathalmaz%1==0):
+                    print(int(adathalmaz))
+                else:
+                    print(round(adathalmaz, 2))
 
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
@@ -215,9 +219,9 @@ while vege:
                         kisebb_szamok+=1
 
                 if (nagyobb_szamok>kisebb_szamok):
-                    print(f"Az átlagnál nagyobb elemekből van több.\nAz átlag: {atlag}. ")
+                    print(f"\nAz átlagnál nagyobb elemekből van több.\nAz átlag: {round(atlag, 2)}")
                 else:
-                    print(f"Az átlagnál kisebb elemekből van több.\nAz átlag: {atlag}.")
+                    print(f"\nAz átlagnál kisebb elemekből van több.\nAz átlag: {round(atlag, 2)}")
 
                         
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
@@ -231,9 +235,9 @@ while vege:
                         negatív_ertek+=1
                     
                 if (negatív_ertek>0):
-                    print("téli hónap.")
+                    print("\nTéli hónap.")
                 else:
-                    print("nem téli hónap")
+                    print("\nNem téli hónap")
                     
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
