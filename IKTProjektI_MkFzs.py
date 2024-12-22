@@ -7,18 +7,18 @@ vege=1
 
 while vege:
     if (len(adatok)==0): 
-        print("\n========[ Válassz menüpontot! ]==========\n")
-        print("[1] - tömb feltöltése billentyűzetről\n[2] - tömb feltöltése véletlen számokkal\n[3] - tömbhöz egy új elem hozzáadása\n[0] - kilépés")
+        print("\n========[ FŐMENÜ ]==========\n")
+        print("[1] - tömb feltöltése billentyűzetről\n\n[2] - tömb feltöltése véletlen számokkal\n\n[3] - tömbhöz egy új elem hozzáadása\n\n[0] - kilépés\n")
     else:
-        print("========[ Válassz menüpontot! ]==========\n")
-        print("[1] - tömb feltöltése billentyűzetről\n[2] - tömb feltöltése véletlen számokkal\n[3] - tömbhöz egy új elem hozzáadása")
-        print("[4] - a tömb egy adott sorszámú elem módosítása\n[5] - a tömb egy adott sorszámú elem törlése\n[6] - tömb ürítése\n[7] - tömb kiírása\n[8] - Feladatok\n[0] - kilépés")
+        print("\n========[ FŐMENÜ ]==========\n")
+        print("[1] - tömb feltöltése billentyűzetről\n\n[2] - tömb feltöltése véletlen számokkal\n\n[3] - tömbhöz egy új elem hozzáadása\n")
+        print("[4] - a tömb egy adott sorszámú elem módosítása\n\n[5] - a tömb egy adott sorszámú elem törlése\n\n[6] - tömb ürítése\n\n[7] - tömb kiírása\n\n[8] - Feladatok\n\n[0] - kilépés\n")
    
     valasz=int(input())
 
     # tömb feltöltése billentyűzetről
     if (valasz==1):
-        szamok=input("Add meg a számokat vesszővel elválasztva: ").replace(" ", "").split(",")
+        szamok=input("\nAdd meg a számokat vesszővel elválasztva: \n").replace(" ", "").split(",")
         
         adatok=[float(i) for i in szamok]
             
@@ -62,7 +62,7 @@ while vege:
 
     # a tömb egy adott sorszámú elem módosítása 
 
-    elif (valasz==4):
+    elif (valasz==4 and len(adatok)!=0):
         print("A tömbben lévő adatok: ")
         for i in range(len(adatok)):
             
@@ -83,7 +83,7 @@ while vege:
 
     # a tömb egy adott sorszámú elem törlése
 
-    elif (valasz==5):
+    elif (valasz==5 and len(adatok)!=0):
         
         print("A tömbben lévő adatok: ")
         for i in range(len(adatok)):
@@ -109,8 +109,8 @@ while vege:
 
     # tömb ürítése
 
-    elif (valasz==6):
-        biztos_kerdes=int(input())
+    elif (valasz==6 and len(adatok)!=0):
+        biztos_kerdes=int(input("Biztosan űriteni akarod? ha igen, írd be hogy 1\n"))
 
         if (biztos_kerdes==1):
             adatok.clear()
@@ -119,7 +119,7 @@ while vege:
 
     # tömb kiírása 
     
-    elif (valasz==7):
+    elif (valasz==7 and len(adatok)!=0):
         print("A tömbben lévő adatok: ")
         for i in range(len(adatok)):
             
@@ -137,14 +137,17 @@ while vege:
         kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
     #Feadatok
-    elif (valasz==8):
+    elif (valasz==8 and len(adatok)!=0):
+        valasz2=""
+        while (valasz2!=0):
             if (len(adatok)==0):
                 print("Először adj meg adatokat!")
                 
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
     
             else:
-                print("A maximum érték hányszor fordul elő? = 1\nMekkora az adathalmaz terjedelme? = 2\nAz átlagnál kisebb, vagy az átlagnál nagyobb értékből van-e több? = 3\nTéli hónapban vagy? Van-e benne negatív hőmérséklet? = 4")
+                print("\n========[ FELADATOK ]==========\n")
+                print("[1] - A maximum érték hányszor fordul elő?\n\n[2] - Mekkora az adathalmaz terjedelme?\n\n[3] - Az átlagnál kisebb, vagy az átlagnál nagyobb értékből van-e több?\n\n[4] - Téli hónapban vagy? Van-e benne negatív hőmérséklet?\n\n[0] - vissza a főmenüne.\n")
             
             valasz2=int(input())
             # 1a feladat 
@@ -159,10 +162,10 @@ while vege:
                 
 
                 for i in range(len(adatok)):
-                    if (adatok[i]==max_ertek):
+                    if (adatok[i]==adatok[max_ertek]):
                        maximum_ertekek_szama+=1
 
-                print(f"{max_ertek} {maximum_ertekek_szama} alkalommal.")
+                print(f"\nA maximum érték a következő volt: {adatok[max_ertek]}\nEnnyi alkalommal fordult elő: {maximum_ertekek_szama}")
 
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
@@ -191,6 +194,8 @@ while vege:
 
             # 1c feladat 
 
+            # 27.3, 30.2, 19.2, 26.3, 27.3, 27.2, 27, 10.2
+            
             elif (valasz2==3):
                 adatok_szama=len(adatok)
                 adatok_osszege=0
