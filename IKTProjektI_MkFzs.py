@@ -150,8 +150,12 @@ while vege:
             # 1a feladat 
 
             if (valasz2==1):
-                max_ertek=max(adatok)
+                max_ertek=0
                 maximum_ertekek_szama=0
+                
+                for i in range(len(adatok)):
+                    if (adatok[i]>adatok[max_ertek]):
+                        max_ertek=i
                 
 
                 for i in range(len(adatok)):
