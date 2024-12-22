@@ -6,8 +6,8 @@ vege=1
 
 
 while vege:
-    if (len(adatok)==0):    
-        print("========[ Válassz menüpontot! ]==========\n")
+    if (len(adatok)==0): 
+        print("\n========[ Válassz menüpontot! ]==========\n")
         print("[1] - tömb feltöltése billentyűzetről\n[2] - tömb feltöltése véletlen számokkal\n[3] - tömbhöz egy új elem hozzáadása\n[0] - kilépés")
     else:
         print("========[ Válassz menüpontot! ]==========\n")
@@ -20,7 +20,7 @@ while vege:
     if (valasz==1):
         szamok=input("Add meg a számokat vesszővel elválasztva: ").replace(" ", "").split(",")
         
-        adatok=[int(i) for i in szamok]
+        adatok=[float(i) for i in szamok]
             
         kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
         
@@ -67,9 +67,15 @@ while vege:
         for i in range(len(adatok)):
             
             if (i==len(adatok)-1):
-                print(int(adatok[i]), end="")
+                if (adatok[i]%1==0):
+                    print(int(adatok[i]), end="")
+                else:
+                    print(adatok[i]*100/100, end="")
             else:
-                print(int(adatok[i]), end=", ")
+                if (adatok[i]%1==0):
+                    print(int(adatok[i]), end=", ")
+                else:
+                    print(adatok[i]*100/100, end=", ")
             
         adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet módositanád: "))
         
@@ -83,9 +89,15 @@ while vege:
         for i in range(len(adatok)):
             
             if (i==len(adatok)-1):
-                print(int(adatok[i]), end="")
+                if (adatok[i]%1==0):
+                    print(int(adatok[i]), end="")
+                else:
+                    print(adatok[i]*100/100, end="")
             else:
-                print(int(adatok[i]), end=", ")
+                if (adatok[i]%1==0):
+                    print(int(adatok[i]), end=", ")
+                else:
+                    print(adatok[i]*100/100, end=", ")
         
         adott_sorszam=int(input("\nadd meg hanyadik sorszámú elemet törölnéd: "))
         
@@ -112,9 +124,15 @@ while vege:
         for i in range(len(adatok)):
             
             if (i==len(adatok)-1):
-                print(int(adatok[i]), end="")
+                if (adatok[i]%1==0):
+                    print(int(adatok[i]), end="")
+                else:
+                    print(adatok[i]*100/100, end="")
             else:
-                print(int(adatok[i]), end=", ")
+                if (adatok[i]%1==0):
+                    print(int(adatok[i]), end=", ")
+                else:
+                    print(adatok[i]*100/100, end=", ")
             
         kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
@@ -146,10 +164,20 @@ while vege:
 
 
             # 1b feladat 
+            
+            # 27.3, 26.8, 25.7, 26.3, 27.3, 27.2, 27, 27.3
 
             elif (valasz2==2):
-                max_ertek=max(adatok)
-                min_ertek=min(adatok)
+                max_ertek=0
+                min_ertek=0
+                
+                for i in range(len(adatok)):
+                    if (adatok[i]>adatok[max_ertek]):
+                        max_ertek=i
+                        
+                for i in range(len(adatok)):
+                    if (adatok[i]<adatok[min_ertek]):
+                        min_ertek=i
                     
                 adathalmaz=max_ertek-min_ertek
 
