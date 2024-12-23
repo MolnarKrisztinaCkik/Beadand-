@@ -114,9 +114,11 @@ while vege:
 
         if (biztos_kerdes==1):
             adatok.clear()
-        else:
+            print("A törlés sikeres!")
+            
             kilepes=float(input("Ahhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
+            
     # tömb kiírása 
     
     elif (valasz==7 and len(adatok)!=0):
@@ -190,9 +192,9 @@ while vege:
                 adathalmaz=adatok[max_ertek]-adatok[min_ertek]
 
                 if (adathalmaz%1==0):
-                    print(f"\nAz adathalmaz hossza:{int(adathalmaz)}")
+                    print(f"\nAz adathalmaz terjedelme:{int(adathalmaz)}")
                 else:
-                    print(f"\nAz adathalmaz hossza: {round(adathalmaz, 2)}")
+                    print(f"\nAz adathalmaz terjededlme: {round(adathalmaz, 2)}")
 
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
