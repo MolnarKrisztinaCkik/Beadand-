@@ -167,7 +167,8 @@ while vege:
                     if (adatok[i]==adatok[max_ertek]):
                        maximum_ertekek_szama+=1
 
-                print(f"\nA maximum érték a következő volt: {adatok[max_ertek]}\nEnnyi alkalommal fordult elő: {maximum_ertekek_szama}")
+                print(f"\nA maximum érték a következő volt: {adatok[max_ertek]}")
+                print(f"\nEnnyi alkalommal fordult elő: {maximum_ertekek_szama}")
 
                 kilepes=float(input("\nAhhoz, hogy vissza lépj, írj be bármilyen számot! = "))
 
